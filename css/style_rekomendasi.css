@@ -1,152 +1,248 @@
-/* ==========================
-   CONTAINER & FORM
-========================== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f7;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 140px; /* aman untuk navbar fixed */
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px 10px; /* lebih fleksibel untuk HP */
 }
-
-@media (max-width: 768px) {
-    .hasil {
-        font-size: 14px;
-    }
-}
-
 
 h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 3%;
+    font-size: 2rem;
 }
 
 .sub {
-  text-align: center;
-  margin-bottom: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 .form-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
 }
 
-/* Inputs & Buttons */
-select, button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  font-size: 1rem;
+.container h2 {
+    margin-top: 3%;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+select.placeholder {
+    color: #999;
+}
+
+select.placeholder option {
+    color: #000;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    font-size: 1rem;
 }
 
 button {
-  background: var(--primary);
-  color: white;
-  cursor: pointer;
-  border: none;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #FF9800;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-  background: #a04924;
+    background: #FB8C00;
 }
 
-/* ==========================
-   HASIL REKOMENDASI (CARD)
-========================== */
-/* Hasil rekomendasi */
-/* ==========================
-   HASIL REKOMENDASI
-========================== */
 .hasil {
-    font-size: 14px;      /* font lebih kecil */
-    line-height: 1.5;
-    color: #333;
-    margin-top: 15px;
+    margin-top: 20px;
 }
-
-/* Jika menambahkan card dinamis */
-.hasil .card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 12px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.hasil .card h3 {
-    font-size: 16px;       /* lebih kecil */
-    margin-bottom: 5px;
-}
-
-.hasil .card p {
-    font-size: 14px;
-    margin: 2px 0;
-}
-
-@media (max-width: 480px) {
-    .hasil {
-        font-size: 13px;
-    }
-
-    .hasil .card h3 {
-        font-size: 14px;
-    }
-
-    .hasil .card p {
-        font-size: 12px;
-    }
-}
-
-
 
 .card {
-  background: #fff;
-  border-radius: 15px;
-  display: flex;
-  gap: 15px;
-  padding: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-wrap: wrap;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card img {
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 12px;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+.body h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
 
+.meta-top {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.tag-type, .tag-price, .tag-suasana, .tag-score {
+    background: #eef3ff;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    border: 1px solid #dcdcff;
+    color: #4c6ae4;
+}
+
+.tag-score {
+    margin-left: auto;
+    background: #fafafa;
+    border: 1px solid #666;
+    color: #777;
+}
+
+.desc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.tag-desc {
+    background: #f3f3ff;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #4c5bd4;
+    border: 1px solid #dcdcff;
+    white-space: nowrap;
+}
 
 .more-btn {
-  display: block;
-  margin: 12px auto 0 auto;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 13px;
+    background: #FF9800;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-@media (max-width: 480px) {
-  .container {
-    padding-top: 160px;
-  }
+.more-btn:hover {
+    background: #FB8C00;
+}
 
-  .card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+/* Responsive Card untuk HP */
+@media screen and (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .card img {
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .meta-top, .desc-tags {
+        gap: 5px;
+    }
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 160px;
-  }
+    z-index: 1000;
 }
 
+/* Tambahkan padding-top untuk konten agar tidak tertutup navbar */
+.content {
+    flex: 1;
+    padding-top: 80px; /* sesuaikan dengan tinggi navbar */
+}
+
+
+/* MEDIA QUERY UNTUK HP */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .sub {
+        font-size: 0.9rem;
+    }
+    .card {
+        flex-direction: column; /* gambar di atas teks */
+        gap: 10px;
+    }
+    .card img {
+        width: 100%; /* penuh lebar container */
+        height: auto;
+    }
+    button, select {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .tag-desc, .tag-type, .tag-price, .tag-suasana, .tag-score {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* tinggi minimal sesuai viewport */
+}
+
+.content {
+    flex: 1; /* mengambil sisa ruang agar footer di bawah */
+}
