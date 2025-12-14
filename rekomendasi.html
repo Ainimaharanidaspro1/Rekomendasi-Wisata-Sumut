@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Wisata</title>
+    <link rel="stylesheet" href="css/style_rekomendasi.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Feather Icons -->
+<script src="https://unpkg.com/feather-icons"></script>
+
+<body>
+
+<!-- Navbar start -->
+<nav class="navbar">
+<a href="#"class="navbar-logo">rekomendasi<span>wisata</span>.</a>
+
+<div class="navbar-nav">
+<a href="index.html#home">Beranda</a>
+<a href="index.html#about">Tentang SUMUT</a>
+<a href="index.html#menu">Daftar Wisata</a>
+<a href="index.html#kami">Tentang Kami</a>
+<a href="index.html#contact">Kontak</a>
+<a href="rekomendasi.html">Rekomendasi</a>
+
+
+</div>
+</nav>
+<!-- Navbar end -->
+
+    <div class="container">
+        <h1>Rekomendasi Wisata</h1>
+        <p class="sub">Masukkan preferensi kamu dan sistem akan memberi rekomendasi secara real-time.</p>
+
+        <!-- FORM PREFERENSI -->
+        <div class="form-box">
+            <label>Tipe Wisata</label>
+            <select id="tipe">
+                <option value="any" disabled selected hidden>Pilih</option>
+                <option value="alam">Alam</option>
+                <option value="danau">Danau</option>
+                <option value="bukit">Bukit</option>
+                <option value="air-terjun">Air Terjun</option>
+                <option value="gunung">Gunung</option>
+                <option value="tematik">Tematik</option>
+                <option value="geosite">Geosite</option>
+                <option value="pulau">Pulau</option>
+                <option value="satwa">Satwa</option>
+            </select>
+
+            <label>Budget (perkiraan per orang)</label>
+            <select id="budget">
+                <option value="any" disabled selected hidden>Pilih</option>
+                <option value="cheap">Murah (≤ Rp100.000)</option>
+                <option value="medium">Sedang (Rp100.000 - Rp300.000)</option>
+                <option value="expensive">Mahal (≥ Rp300.000)</option>
+            </select>
+
+            <label>Suasana</label>
+            <select id="suasana">
+                <option value="any" disabled selected hidden>Pilih</option>
+                <option value="ramai">Ramai</option>
+                <option value="tenang">Tenang</option>
+            </select>
+
+            <button id="btnRekomendasi">Cari Rekomendasi</button>
+        </div>
+
+        <!-- HASIL REKOMENDASI -->
+        <h2>Hasil Rekomendasi</h2>
+        <div id="hasil" class="hasil"></div>
+
+    </div>
+
+    <!-- #Footer start -->
+<footer>
+
+  <div class="socials">
+      <a href="https://www.instagram.com/ainimaharani30"><i data-feather="instagram"></i></a>
+      <a href="https://x.com"><i data-feather="twitter"></i></a>
+      <a href="https://www.facebook.com/share/1ABssfinW9/"><i data-feather="facebook"></i></a>
+
+  <div class="links">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang SUMUT</a>
+      <a href="#menu">Daftar Wisata</a>
+      <a href="#contact">Kontak</a>
+      </div>
+
+  <div class="credit">
+      <p>Created By <a href=""> Wisteria</a> | &copy; 2023.</p>
+  </div>
+</footer>
+<!-- #Footer end -->
+
+    <script src="js/rekomendasi.js"></script>
+</body>
+</html>
