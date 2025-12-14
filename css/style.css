@@ -614,13 +614,80 @@ footer .credit a {
 .arrItem1 {
   width: 100%;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* membuat konten utama stretch sebelum footer */
+}
+
+/* Hasil rekomendasi */
+.hasil {
+    font-size: 14px;  /* default lebih kecil */
+    line-height: 1.5;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Card judul */
+.body h3 {
+    font-size: 16px;  /* lebih kecil */
+    margin-bottom: 5px;
+}
+
+/* Tag */
+.tag-desc, .tag-type, .tag-price, .tag-suasana {
+    font-size: 11px; /* lebih kecil */
+}
+
+/* Media query HP kecil */
 @media (max-width: 480px) {
-  html {
-    font-size: 55%;
-  }
+    .hasil {
+        font-size: 13px; /* lebih kecil lagi */
+    }
 
-  footer {
-    padding: 1.5rem 1rem;
-  }
+    .body h3 {
+        font-size: 14px;
+    }
+
+    .tag-desc, .tag-type, .tag-price, .tag-suasana {
+        font-size: 10px;
+    }
+}
+
+/* Default: sembunyikan menu-toggle di desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Tampilkan menu-toggle di layar ≤ 768px (HP / tablet kecil) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Navbar links default di HP: sembunyikan dulu */
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
 }
