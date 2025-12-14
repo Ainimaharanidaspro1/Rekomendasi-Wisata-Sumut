@@ -8,6 +8,13 @@
   padding-top: 140px; /* aman untuk navbar fixed */
 }
 
+@media (max-width: 768px) {
+    .hasil {
+        font-size: 14px;
+    }
+}
+
+
 h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -48,12 +55,51 @@ button:hover {
 /* ==========================
    HASIL REKOMENDASI (CARD)
 ========================== */
+/* Hasil rekomendasi */
+/* ==========================
+   HASIL REKOMENDASI
+========================== */
 .hasil {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
+    font-size: 14px;      /* font lebih kecil */
+    line-height: 1.5;
+    color: #333;
+    margin-top: 15px;
 }
+
+/* Jika menambahkan card dinamis */
+.hasil .card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hasil .card h3 {
+    font-size: 16px;       /* lebih kecil */
+    margin-bottom: 5px;
+}
+
+.hasil .card p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+@media (max-width: 480px) {
+    .hasil {
+        font-size: 13px;
+    }
+
+    .hasil .card h3 {
+        font-size: 14px;
+    }
+
+    .hasil .card p {
+        font-size: 12px;
+    }
+}
+
+
 
 .card {
   background: #fff;
@@ -77,18 +123,7 @@ button:hover {
   width: 100%;
 }
 
-.body h3 {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
 
-/* Tag */
-.tag-desc, .tag-type, .tag-price, .tag-suasana {
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 8px;
-  margin-top: 5px;
-}
 
 .more-btn {
   display: block;
@@ -114,3 +149,4 @@ button:hover {
     height: 160px;
   }
 }
+
