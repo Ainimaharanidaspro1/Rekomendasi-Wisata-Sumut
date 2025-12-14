@@ -614,3 +614,13 @@ footer .credit a {
 .arrItem1 {
   width: 100%;
 }
+
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+}
